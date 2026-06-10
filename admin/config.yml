@@ -5,7 +5,7 @@ backend:
 media_folder: images
 public_folder: /images
 
-site_url: https://baldonseventscommittee.org.uk
+site_url: https://baldonsevents.com
 
 collections:
   - name: events
