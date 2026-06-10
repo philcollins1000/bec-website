@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,12 +37,27 @@
   <div class="bg"></div>
   <div class="veil"></div>
   <div class="inner">
-    <h1 class="serif">Bringing the<br>Baldons together</h1>
-    <p>We organise events for the community, and raise money for worthy causes across the villages.</p>
-    <div class="ctas">
-      <a class="btn btn-amber" href="events.html">Our events <span class="arr">›</span></a>
-      <a class="btn btn-ghost" href="get-involved.html">Get involved</a>
+    <div class="hero-text">
+      <h1 class="serif">Bringing the<br>Baldons together</h1>
+      <p>We organise events for the community, and raise money for worthy causes across the villages.</p>
+      <div class="ctas">
+        <a class="btn btn-amber" href="events.html">Our events <span class="arr">›</span></a>
+        <a class="btn btn-ghost" href="get-involved.html">Get involved</a>
+      </div>
     </div>
+    {% assign upcoming = site.events | where: "status", "Upcoming" | sort: "date" %}
+    {% for event in upcoming %}
+      {% assign yr = event.date | date: "%Y" | plus: 0 %}
+      {% if yr >= 2020 %}
+    <div class="next-event-card">
+      <div class="nec-label">Next event</div>
+      <h3>{{ event.title }}</h3>
+      <div class="nec-date">🗓 {{ event.date | date: "%-d %B %Y" }}{% if event.location %}<br>{{ event.location }}{% endif %}</div>
+      <a class="btn btn-amber" href="events.html">Find out more ›</a>
+    </div>
+      {% break %}
+      {% endif %}
+    {% endfor %}
   </div>
 </div>
 

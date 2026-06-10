@@ -58,6 +58,34 @@ img { max-width: 100%; display: block; }
 .pagehead h1 { font-size: 52px; line-height: 1.02; margin: 0 0 14px; color: #fff; }
 .pagehead p { color: #a8b4d0; font-size: 18px; margin: 0; max-width: 560px; }
 
+/* next event card in hero */
+.hero .inner { display: flex; align-items: flex-end; justify-content: space-between; gap: 32px; }
+.hero .hero-text { flex: 1; }
+.next-event-card {
+  flex-shrink: 0;
+  width: 240px;
+  background: rgba(255,255,255,.12);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,.22);
+  border-radius: 16px;
+  padding: 20px 22px 22px;
+  color: white;
+  margin-bottom: 4px;
+}
+.next-event-card .nec-label {
+  font-size: 10px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 10px;
+}
+.next-event-card h3 {
+  font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600;
+  line-height: 1.2; margin-bottom: 8px;
+}
+.next-event-card .nec-date {
+  font-size: 12px; color: rgba(255,255,255,.72); line-height: 1.5; margin-bottom: 16px;
+}
+.next-event-card .btn { font-size: 12px; padding: 8px 16px; }
+
 /* mission strips */
 .mission-strips { margin-top: 56px; }
 .mission-strip { display: grid; grid-template-columns: 1fr 1fr; min-height: 340px; }
