@@ -75,7 +75,7 @@
               <div class="vh">🙋 Volunteers needed</div>
               <ul>
                 {% for v in event.volunteers %}
-                <li>{{ v.role }}</li>
+                <li>{% if v.role %}{{ v.role }}{% else %}{{ v }}{% endif %}</li>
                 {% endfor %}
               </ul>
               {% if event.setup_time or event.takedown_time %}
