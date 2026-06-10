@@ -16,7 +16,7 @@ collections:
     slug: "{{year}}-{{month}}-{{slug}}"
     fields:
       - { label: Event name, name: title, widget: string }
-      - { label: Date, name: date, widget: datetime, format: YYYY-MM-DD, date_format: DD MMMM YYYY, time_format: false }
+      - { label: Date, name: date, widget: datetime, format: YYYY-MM-DD, date_format: DD MMMM YYYY, time_format: false, picker_utc: true }
       - { label: Location, name: location, widget: string, hint: "e.g. Marsh Baldon Green" }
       - { label: Short description, name: summary, widget: text }
       - { label: Full description, name: body, widget: markdown }
@@ -54,5 +54,5 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - { label: Title, name: title, widget: string }
-      - { label: Date, name: date, widget: datetime }
+      - { label: Date, name: date, widget: datetime, picker_utc: true }
       - { label: Body, name: body, widget: markdown }

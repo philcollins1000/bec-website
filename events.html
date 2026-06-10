@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,55 +47,54 @@
 
     <h2 class="head serif">Upcoming events</h2>
 
+    {% assign upcoming = site.events | where: "status", "Upcoming" | sort: "date" %}
+    {% assign has_valid = false %}
+    {% for event in upcoming %}
+      {% assign yr = event.date | date: "%Y" | plus: 0 %}
+      {% if yr >= 2020 %}{% assign has_valid = true %}{% endif %}
+    {% endfor %}
+
+    {% if has_valid %}
     <div class="event-grid">
-
-      <!-- Fireworks Night -->
-      <div class="event-card">
-        <div class="event-img">
-          <img src="images/fireworks-hero.jpg" alt="Fireworks Night on the Baldons village green">
-        </div>
-        <div class="event-body">
-          <span class="event-tag">Annual</span>
-          <h3>Fireworks &amp; Bonfire Night</h3>
-          <div class="event-date">🗓 Saturday 7 November 2026 · Marsh Baldon Green</div>
-          <p>Our flagship event — 800 to 1,000 villagers gather on the green each November for a bonfire, fairground rides, food and wine, and a spectacular fireworks display. The income from this event funds everything else BEC does.</p>
-          <div class="volunteer-box">
-            <div class="vh">🙋 Volunteers needed</div>
-            <ul>
-              <li>Marquee erection (Friday afternoon before the event)</li>
-              <li>Car parking marshals (evening of event)</li>
-              <li>Bar team</li>
-              <li>Marquee take-down (Sunday morning after)</li>
-            </ul>
-            <div class="vtimes">If you can help with any of the above, please <a href="get-involved.html">get in touch</a>.</div>
+      {% for event in upcoming %}
+        {% assign yr = event.date | date: "%Y" | plus: 0 %}
+        {% if yr >= 2020 %}
+        <div class="event-card">
+          {% if event.image %}
+          <div class="event-img">
+            <img src="{{ event.image }}" alt="{{ event.title }}">
+          </div>
+          {% endif %}
+          <div class="event-body">
+            <span class="event-tag">Annual</span>
+            <h3>{{ event.title }}</h3>
+            <div class="event-date">🗓 {{ event.date | date: "%-d %B %Y" }}{% if event.location %} · {{ event.location }}{% endif %}</div>
+            <p>{{ event.summary }}</p>
+            {% if event.volunteers %}
+            <div class="volunteer-box">
+              <div class="vh">🙋 Volunteers needed</div>
+              <ul>
+                {% for v in event.volunteers %}
+                <li>{{ v.role }}</li>
+                {% endfor %}
+              </ul>
+              {% if event.setup_time or event.takedown_time %}
+              <div class="vtimes">
+                {% if event.setup_time %}<strong>Set-up:</strong> {{ event.setup_time }}<br>{% endif %}
+                {% if event.takedown_time %}<strong>Take-down:</strong> {{ event.takedown_time }}{% endif %}
+              </div>
+              {% endif %}
+              <div class="vtimes" style="margin-top:8px;">If you can help with any of the above, please <a href="get-involved.html">get in touch</a>.</div>
+            </div>
+            {% endif %}
           </div>
         </div>
-      </div>
-
-      <!-- Fun on the Green -->
-      <div class="event-card">
-        <div class="event-img" style="height:auto;background:#f5f1ea;padding:16px;display:flex;align-items:center;justify-content:center;">
-          <img src="images/fun-on-the-green-flyer.png" alt="Baldons Fun on the Green — Saturday 11 July 2026" style="width:100%;height:auto;object-fit:unset;border-radius:8px;">
-        </div>
-        <div class="event-body">
-          <span class="event-tag">Annual</span>
-          <h3>Fun on the Green</h3>
-          <div class="event-date">🗓 Saturday 11 July 2026 · 2pm onwards · Marsh Baldon Green</div>
-          <p>BYO picnic, garden games and World Cup theme on the village green. Live bands, an arrival drink, food tent, fairground rides and games for all ages. A brilliant summer afternoon for the whole village.</p>
-          <div class="volunteer-box">
-            <div class="vh">🙋 Volunteers needed</div>
-            <ul>
-              <li>Marquee and stage set-up (Friday evening from 6pm)</li>
-              <li>Game stall rota (rat run, welly wanging, football board)</li>
-              <li>Bar and drinks team (during event)</li>
-              <li>Marquee take-down (Sunday 10am)</li>
-            </ul>
-            <div class="vtimes">If you can help, please <a href="get-involved.html">get in touch</a>.</div>
-          </div>
-        </div>
-      </div>
-
+        {% endif %}
+      {% endfor %}
     </div>
+    {% else %}
+    <p class="lede">No upcoming events at the moment — check back soon.</p>
+    {% endif %}
 
     <h2 class="head serif" style="margin-top:72px;">Other events we organise</h2>
     <div class="lede">

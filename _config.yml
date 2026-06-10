@@ -1,0 +1,16 @@
+title: Baldons Events Committee
+url: "https://baldonsevents.com"
+baseurl: ""
+
+collections:
+  events:
+    output: false
+    sort_by: date
+  funded:
+    output: false
+  news:
+    output: false
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
