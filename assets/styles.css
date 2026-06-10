@@ -90,8 +90,8 @@ h3.sub { font-size: 24px; margin: 36px 0 14px; }
 /* events */
 .event-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 32px; }
 .event-card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; }
-.event-card .event-img { height: 200px; background: var(--navy); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
-.event-card .event-img img { width: 100%; height: 100%; object-fit: cover; }
+.event-card .event-img { background: var(--navy); display: flex; align-items: center; justify-content: center; position: relative; }
+.event-card .event-img img { width: 100%; height: auto; display: block; }
 .event-card .event-img .event-placeholder { font-size: 48px; opacity: .4; }
 .event-card .event-body { padding: 22px 24px 26px; }
 .event-card .event-tag { display: inline-block; background: #fff3e6; color: var(--amber-dk); font-size: 11px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; padding: 4px 12px; border-radius: 999px; margin-bottom: 12px; }
