@@ -1,6 +1,6 @@
 ---
 title: Test event
-date: 1906-08-19
+date: 2026-08-14
 location: Marsh Baldon Green
 summary: |
   A brand new test event on the Green starting at 2pm
