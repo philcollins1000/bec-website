@@ -61,7 +61,7 @@ img { max-width: 100%; display: block; }
 /* next event card in hero */
 .next-event-card {
   position: absolute;
-  top: 48px;
+  top: 220px;
   right: 48px;
   width: 220px;
   background: rgba(255,255,255,.12);
