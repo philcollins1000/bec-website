@@ -46,13 +46,3 @@ collections:
       - { label: Description, name: description, widget: text }
       - { label: Year funded, name: year, widget: string, required: false }
 
-  - name: news
-    label: News
-    label_singular: News post
-    folder: _news
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - { label: Title, name: title, widget: string }
-      - { label: Date, name: date, widget: datetime, picker_utc: true }
-      - { label: Body, name: body, widget: markdown }
