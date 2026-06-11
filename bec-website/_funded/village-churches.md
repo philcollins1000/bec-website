@@ -1,5 +1,5 @@
 ---
 title: Village Churches
 category: Faith
-description: Donations toward the churches serving the Baldons communities.
+description: Donations to the bells at Marsh Baldon church, a hearing loop for Toot Baldon church, and contributions toward the upkeep of Toot Baldon church cemetery.
 ---

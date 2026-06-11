@@ -1,5 +1,5 @@
 ---
 title: Youth Club
 category: Young people
-description: Funding to support activities for young people in the villages.
+description: Funding activities for young people in the villages, run through Marsh Baldon Village Hall.
 ---

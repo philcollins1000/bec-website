@@ -37,7 +37,7 @@ img { max-width: 100%; display: block; }
 .mark-text { display: flex; flex-direction: column; line-height: 1; }
 .mark-text .m1 { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 31px; color: #fff; }
 .mark-text .m2 { font-size: 11px; letter-spacing: .28em; text-transform: uppercase; color: #a8b4d0; margin-top: 5px; }
-.topnav nav a { color: #c8d0e4; text-decoration: none; font-size: 13px; letter-spacing: .04em; margin-left: 24px; text-transform: uppercase; opacity: .82; }
+.topnav nav a { color: #c8d0e4; text-decoration: none; font-size: 12px; letter-spacing: .02em; margin-left: 18px; text-transform: uppercase; opacity: .82; }
 .topnav nav a:hover { opacity: 1; color: #fff; }
 .topnav nav a.active { color: #e8be63; opacity: 1; }
 

@@ -1,5 +1,5 @@
 ---
 title: Baldon Players
 category: Arts & culture
-description: Supporting the village drama group and their productions.
+description: Ongoing support for the Baldons' own drama group, helping fund their productions and keep live theatre in the villages.
 ---
