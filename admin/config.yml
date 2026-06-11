@@ -1,0 +1,63 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: images
+public_folder: /images
+
+site_url: https://baldonsevents.com
+
+collections:
+  - name: events
+    label: Events
+    label_singular: Event
+    folder: _events
+    create: true
+    slug: "{{year}}-{{month}}-{{slug}}"
+    fields:
+      - { label: Event name, name: title, widget: string }
+      - { label: Date, name: date, widget: datetime, format: YYYY-MM-DD, date_format: DD MMMM YYYY, time_format: false, picker_utc: true }
+      - { label: Location, name: location, widget: string, hint: "e.g. Marsh Baldon Green" }
+      - { label: Short description, name: summary, widget: text }
+      - { label: Full description, name: body, widget: markdown }
+      - label: Volunteers needed
+        name: volunteers
+        widget: list
+        required: false
+        hint: List each volunteer role on a separate line
+        field: { label: Role, name: role, widget: string }
+      - { label: Set-up time, name: setup_time, widget: string, required: false, hint: "e.g. Friday 2pm — marquee erection" }
+      - { label: Take-down time, name: takedown_time, widget: string, required: false, hint: "e.g. Sunday 9am — marquee take-down" }
+      - { label: Event photo, name: image, widget: image, required: false }
+      - label: Status
+        name: status
+        widget: select
+        options: [Upcoming, Past]
+        default: Upcoming
+
+  - name: previous_events
+    label: Previous Events
+    label_singular: Previous Event
+    folder: _previous_events
+    create: true
+    slug: "{{year}}-{{slug}}"
+    fields:
+      - { label: Event title, name: title, widget: string, hint: "e.g. Fireworks Night 2024" }
+      - { label: Short description, name: description, widget: text, hint: "A couple of sentences about the event" }
+      - { label: Photo 1, name: image1, widget: image, required: true }
+      - { label: Photo 2, name: image2, widget: image, required: false }
+      - { label: Photo 3, name: image3, widget: image, required: false }
+      - { label: Video URL, name: video_url, widget: string, required: false, hint: "Paste a YouTube or Vimeo link, e.g. https://www.youtube.com/watch?v=abc123" }
+
+  - name: funded
+    label: What We Fund
+    label_singular: Funded cause
+    folder: _funded
+    create: true
+    fields:
+      - { label: Organisation name, name: title, widget: string }
+      - { label: Category, name: category, widget: string, hint: "e.g. Education, Community, Arts & culture" }
+      - { label: Description, name: description, widget: text }
+      - { label: Year funded, name: year, widget: string, required: false }
+      - { label: Photo, name: image, widget: image, required: false, hint: "Optional photo to display on the What We Fund page" }
+
