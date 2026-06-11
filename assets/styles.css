@@ -90,7 +90,7 @@ img { max-width: 100%; display: block; }
 .mission-strips { margin-top: 56px; }
 .mission-strip { display: grid; grid-template-columns: 1fr 1fr; min-height: 340px; }
 .ms-visual { overflow: hidden; }
-.mission-strip--events .ms-visual { background: url('../images/fireworks-hero.jpg') center 40%/cover no-repeat; }
+.mission-strip--events .ms-visual { background: url('../images/celebration.jpg') center 40%/cover no-repeat; }
 .mission-strip--giving .ms-visual { background: linear-gradient(160deg, var(--navy) 0%, var(--navy2) 100%); display: flex; align-items: center; justify-content: center; }
 .ms-stat-panel { text-align: center; padding: 20px; }
 .ms-big-num { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; font-size: 64px; color: var(--gold); line-height: 1; }
