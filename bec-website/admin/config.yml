@@ -59,4 +59,5 @@ collections:
       - { label: Category, name: category, widget: string, hint: "e.g. Education, Community, Arts & culture" }
       - { label: Description, name: description, widget: text }
       - { label: Year funded, name: year, widget: string, required: false }
+      - { label: Photo, name: image, widget: image, required: false, hint: "Optional photo to display on the What We Fund page" }
 
