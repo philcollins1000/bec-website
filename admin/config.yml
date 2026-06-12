@@ -43,7 +43,7 @@ collections:
     slug: "{{year}}-{{slug}}"
     fields:
       - { label: Event title, name: title, widget: string, hint: "e.g. Fireworks Night 2024" }
-      - { label: Month & year, name: event_date, widget: datetime, format: YYYY-MM, date_format: MMMM YYYY, time_format: false, picker_utc: true, required: false, hint: "Month and year the event took place" }
+      - { label: Month & year, name: event_date, widget: datetime, format: YYYY-MM-DD, date_format: MMMM YYYY, time_format: false, picker_utc: true, required: false, hint: "Month and year the event took place" }
       - { label: Short description, name: description, widget: markdown, hint: "A couple of sentences about the event" }
       - { label: Photo 1, name: image1, widget: image, required: true }
       - { label: Photo 2, name: image2, widget: image, required: false }
@@ -61,4 +61,3 @@ collections:
       - { label: Description, name: description, widget: markdown }
       - { label: Year funded, name: year, widget: string, required: false }
       - { label: Photo, name: image, widget: image, required: false, hint: "Optional photo to display on the What We Fund page" }
-
