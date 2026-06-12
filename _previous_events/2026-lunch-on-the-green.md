@@ -1,9 +1,11 @@
 ---
 title: Lunch on the Green
-event_date: 2022-06-01
+event_date: 2024-06-01
 description: >-
   More dancing, more fun. Baldon Villagers love a party...and a band... and a
   sing song! 
+
+
 
 
   Splat the Rat was an absolute hit with kids and adults alike - some people spent waaay too long splatting -   outcome: the rat met with a very sad demise!
