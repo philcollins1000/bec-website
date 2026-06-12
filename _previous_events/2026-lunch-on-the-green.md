@@ -6,7 +6,7 @@ description: >-
   sing song! 
 
 
-  Splat the Rat was an absolute hit with kids and adults alike - some people spent waaay too long splatting -   the rat met with a very sad demise!
+  Splat the Rat was an absolute hit with kids and adults alike - some people spent waaay too long splatting -   outcome: the rat met with a very sad demise!
 image1: /images/lunch_on_the_green_2022_02.jpg
 image2: /images/lunch_on_the_green_2022_01.jpg
 image3: /images/lunch_on_the_green_2022_03.jpg
