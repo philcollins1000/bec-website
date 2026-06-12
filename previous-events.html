@@ -25,7 +25,7 @@
   }
   .prev-event-card .pe-gallery {
     display: grid;
-    gap: 3px;
+    gap: 3px
   }
   .prev-event-card .pe-gallery.photos-1 { grid-template-columns: 1fr; }
   .prev-event-card .pe-gallery.photos-2 { grid-template-columns: 1fr 1fr; }
@@ -163,7 +163,7 @@
         <div class="pe-body">
           {% if event.event_date %}<div class="pe-date">{{ event.event_date | date: "%B %Y" }}</div>{% endif %}
           <h3>{{ event.title }}</h3>
-          {% if event.description %}<p>{{ event.description }}</p>{% endif %}
+                    {% if event.description %}<div class="pe-desc">{{ event.description | markdownify }}</div>{% endif %}
         </div>
       </div>
       {% endfor %}
