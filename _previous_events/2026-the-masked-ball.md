@@ -1,6 +1,6 @@
 ---
 title: The Masked Ball
-event_date: 2016-10
+event_date: 2016-10-01
 description: >-
   Bruce and his brilliant band... The Sole Traders, made for a fantastic night.
 
