@@ -1,6 +1,6 @@
 ---
 title: Lunch on the Green
-event_date: 2022-06
+event_date: 2022-06-01
 description: >-
   More dancing, more fun. Baldon Villagers love a party...and a band... and a
   sing song! 
