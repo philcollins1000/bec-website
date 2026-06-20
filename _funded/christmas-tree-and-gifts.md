@@ -1,5 +1,5 @@
 ---
-title: Christmas Tree, Lights & Gifts
+title: Christmas Tree, Lights & Carol Singing
 category: Village traditions
-description: The tree and lights on the village gree each December, mulled wine for the Carol Singing, and gifts for the children of the villages.
+description: The tree and lights on the village green each December, and mulled wine for the Carol Singing.
 ---
