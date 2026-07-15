@@ -6,10 +6,10 @@ summary: "Our flagship event — 800 to 1,000 villagers gather on the green each
 image: "/images/fireworks-hero.jpg"
 status: Upcoming
 volunteers:
-  - role: "Marquee erection (Friday afternoon before the event)"
+  - role: "Marquee erection (Saturday morning, day of the event)"
   - role: "Car parking marshals (evening of event)"
   - role: "Bar team"
   - role: "Marquee take-down (Sunday morning after)"
-setup_time: "Friday afternoon before the event"
+setup_time: "Saturday morning — day of the event"
 takedown_time: "Sunday morning after the event"
 ---
